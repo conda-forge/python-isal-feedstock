@@ -1,20 +1,19 @@
-
 {% set name = "isal" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
-  name: "python-isal"  # To avoid confusion with isa-l proper
-  version: "{{ version }}"
+  name: python-isal    # To avoid confusion with isa-l proper
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 25828d73e71e17ffcc54aeda20b8e4ddb654e805fcd6dc471e6d51090ea8b860
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4627adcd27f510ede7ca31c65b6594ee2380cd5111af85c7e7e948d58f639558
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   # isa-l package only available on linux as of yet.
-  skip: True  # [not linux]  
+  skip: true  # [not linux]
 
 requirements:
   build:
@@ -34,13 +33,13 @@ test:
     - isal
 
 about:
-  home: "https://github.com/pycompression/python-isal"
+  home: https://github.com/pycompression/python-isal
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Faster zlib and gzip compatible compression and decompression by providing python bindings for the isa-l library."
-  doc_url: "https://python-isal.readthedocs.io" 
-  dev_url: "https://github.com/pycompression/python-isal"
+  summary: Faster zlib and gzip compatible compression and decompression by providing python bindings for the isa-l library.
+  doc_url: https://python-isal.readthedocs.io
+  dev_url: https://github.com/pycompression/python-isal
 
 extra:
   recipe-maintainers:
