@@ -10,7 +10,7 @@ source:
   sha256: 4627adcd27f510ede7ca31c65b6594ee2380cd5111af85c7e7e948d58f639558
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # isa-l package only available on linux as of yet.
   skip: true  # [not linux]
