@@ -24,12 +24,17 @@ requirements:
     - isa-l
     - python
     - pip
+    - cython  # Cython and setuptools are also required in pyproject.toml
+    - setuptools 
   run:
     - python
     - isa-l >=2.26
 test:
   imports:
     - isal
+  script:
+    - python -c "from isal import igzip"
+    - python -c "from isal import isal_zlib; isal_zlib.adler32(b'test')"
 
 about:
   home: https://github.com/pycompression/python-isal
