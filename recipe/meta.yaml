@@ -1,5 +1,5 @@
 {% set name = "isal" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: python-isal    # To avoid confusion with isa-l proper
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b2d05c7a3061348ad6d24870c4a0a7a180a41b20020c64120c8d096930d78d67
+  sha256: 69979cd94df33be800cc4a39ea34f69f115e425108b488e8644ab127d27fc45c
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   script_env:
     - PYTHON_ISAL_LINK_DYNAMIC=true  # Forces a dynamic link against isa-l in conda-forge
   # isa-l package only available on linux as of yet.
-  skip: true  # [not linux]
+  skip: true  # [not unix]
 
 requirements:
   build:
