@@ -1,5 +1,5 @@
 {% set name = "isal" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: python-isal    # To avoid confusion with isa-l proper
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 69979cd94df33be800cc4a39ea34f69f115e425108b488e8644ab127d27fc45c
+  sha256: 5b60ca28d23026c7f1ea8a27a0ec5de1aa4c73e172b0f43450a73da961074e4a
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - python
     - pip
     - cython  # Cython and setuptools are also required in pyproject.toml
-    - setuptools 
+    - setuptools
   run:
     - python
     - isa-l >=2.26
