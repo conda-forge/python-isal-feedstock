@@ -14,8 +14,6 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ISAL_LINK_DYNAMIC=true  # Forces a dynamic link against isa-l in conda-forge
-  # isa-l package only available on linux as of yet.
-  skip: true  # [not unix]
 
 requirements:
   build:
