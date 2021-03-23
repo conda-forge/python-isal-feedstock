@@ -1,5 +1,5 @@
 {% set name = "isal" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: python-isal    # To avoid confusion with isa-l proper
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 53305ae3c4a54a658312de1fde9848074e65d45f1cb93988ac77b2986dd577df
+  sha256: d519aa19c1663ea347f501ecc07f86a2695d301446be8f04d88bb46541815ba2
 
 build:
   number: 0
