@@ -10,7 +10,7 @@ source:
   sha256: 8d07a07caacc3be4f478ceff8353941f360f922e8854ff1cbee4a44b443eb2af
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ISAL_LINK_DYNAMIC=true  # Forces a dynamic link against isa-l in conda-forge
