@@ -1,5 +1,5 @@
 {% set name = "isal" %}
-{% set version = "0.11.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: python-isal    # To avoid confusion with isa-l proper
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8d07a07caacc3be4f478ceff8353941f360f922e8854ff1cbee4a44b443eb2af
+  sha256: a30369de6852109eef8ca1bdd46d7e4b5c4517846a25acfc707cbb19db66ac80
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ISAL_LINK_DYNAMIC=true  # Forces a dynamic link against isa-l in conda-forge
@@ -18,12 +18,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - pip
   host:
     - isa-l
     - python
-    - pip
-    - cython  # Cython and setuptools are also required in pyproject.toml
-    - setuptools
   run:
     - python
     - isa-l >=2.26
@@ -36,8 +34,7 @@ test:
 
 about:
   home: https://github.com/pycompression/python-isal
-  license: MIT
-  license_family: MIT
+  license: PSF-2.0
   license_file: LICENSE
   summary: Faster zlib and gzip compatible compression and decompression by providing python bindings for the isa-l library.
   doc_url: https://python-isal.readthedocs.io
