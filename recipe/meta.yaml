@@ -18,10 +18,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - pip
   host:
     - isa-l
     - python
+    - pip
   run:
     - python
     - isa-l >=2.26
