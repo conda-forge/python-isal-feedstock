@@ -18,13 +18,16 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib{'c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [target_platform != build_platform]
   host:
     - isa-l
     - python
     - pip
   run:
     - python
-    - isa-l >=2.26
+
 test:
   imports:
     - isal
