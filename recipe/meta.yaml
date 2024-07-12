@@ -1,12 +1,11 @@
-{% set name = "isal" %}
 {% set version = "1.6.1" %}
 
 package:
-  name: python-isal    # To avoid confusion with isa-l proper
+  name: python-isal
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/i/isal/isal-{{ version }}.tar.gz
   sha256: 7b64b75d260b544beea3f59cb25a6f520c04768818ef4ac316ee9a1f2ebf18f5
 
 build:
@@ -18,9 +17,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib{'c') }}
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}  # [target_platform != build_platform]
+    - {{ stdlib('c') }}
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - isa-l
     - python
