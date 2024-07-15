@@ -26,7 +26,6 @@ requirements:
     - pip
   run:
     - python
-    - isa-l >=2.26
 test:
   imports:
     - isal
