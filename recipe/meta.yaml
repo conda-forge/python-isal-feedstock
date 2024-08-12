@@ -22,10 +22,10 @@ requirements:
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - versioningit >=1.1.0
     - setuptools
-    - pip
   host:
     - isa-l
     - python
+    - pip
   run:
     - python
 
