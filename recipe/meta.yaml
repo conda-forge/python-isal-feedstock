@@ -1,12 +1,12 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: python-isal
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/isal/isal-{{ version }}.tar.gz
-  sha256: 845aeff4ffb3a2ea24bde22b165f99aafb1ee92f5da3930cb23638501e8332c9
+  url: https://pypi.org/packages/source/i/isal/isal-{{ version }}.tar.gz
+  sha256: c6a4f6652590ca238a864648f9933b366fa5ae664df56c5e5862ff29dd0c69db
 
 build:
   number: 0
