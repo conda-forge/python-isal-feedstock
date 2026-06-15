@@ -38,6 +38,7 @@ test:
   commands:
     - python -c "from isal import igzip"
     - python -c "from isal import isal_zlib; isal_zlib.adler32(b'test')"
+    - python -c "from importlib.metadata import version; assert version('isal') == '{{ version }}'"
 
 about:
   home: https://github.com/pycompression/python-isal
