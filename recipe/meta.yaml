@@ -1,4 +1,4 @@
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: python-isal
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/i/isal/isal-{{ version }}.tar.gz
-  sha256: 124233e9a31a62030a07aafd48c26689561926f4e10417ed3ea46c211218f2b4
+  sha256: 71fc337ad75fb2a1802fa0b48b6a52c5f503cde17f8cc6522df2688ee7daf168
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - PYTHON_ISAL_LINK_DYNAMIC=true  # Forces a dynamic link against isa-l in conda-forge
