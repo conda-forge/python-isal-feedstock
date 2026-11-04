@@ -1,4 +1,4 @@
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: python-isal
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/i/isal/isal-{{ version }}.tar.gz
-  sha256: 71fc337ad75fb2a1802fa0b48b6a52c5f503cde17f8cc6522df2688ee7daf168
+  sha256: d210dca02a689ef2af709d2c62d2daac2e36b5d2fa06e6dc0d023c83fee77e91
 
 build:
   number: 0
